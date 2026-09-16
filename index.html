@@ -336,7 +336,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);fon
       <h1 style="margin-top:8px">Every ad, as it runs</h1>
       <p class="sub">The Luxury of Living (Luxury Suite Collection) and The Luxury of Choice, previewed in each platform's own placement. Pick a platform, then a language.</p>
     </div>
-    <div class="small muted">Copy sets: EN-GB · EN-US · EN-Gulf · TR · FR · AR · RU</div>
+    <div class="small muted">Languages: EN-UK · EN-US · EN-Gulf · TR · FR · AR · RU</div>
   </div>
   <div class="tabs" role="tablist" id="platTabs"></div>
 </div></header>
@@ -344,7 +344,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);fon
 <main class="wrap" id="main"></main>
 
 <footer>
-  <span>Sources: RPD Instagram Build Sheet v2.2 (4 Sep 2026) and RPD Google Build Sheet v3 (7 Sep 2026); agency Drive folder "Digital Ad Content" (four caption sets, 17 images, one drone reel); July 2026 RPD Russian previews for the Yandex copy. Ennismore taxonomy names and UTM URLs live on the build sheets, not here.</span>
+  <span>Rixos Premium Dubai · The Luxury of Living and The Luxury of Choice · creative from the agency "Digital Ad Content" set (four caption sets, 17 images, one drone reel).</span>
   <span>Every screen is a rendering of the ad's fields on a drawn replica of the placement, not a screenshot from the platform. Platforms crop, truncate and label slightly differently from release to release. Hotel-ads rates are samples; the real ones come from the Hotel Center feed.</span>
 </footer>
 
@@ -487,11 +487,11 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);fon
 
   /* ============ platform registry ============ */
   var PLATS=[
-    {id:"instagram",name:"Instagram",status:"live",st:"Live"},
-    {id:"google",name:"Google",status:"draft",st:"Draft"},
-    {id:"yandex",name:"Yandex",status:"draft",st:"Draft"},
-    {id:"snapchat",name:"Snapchat",status:"draft",st:"Draft"},
-    {id:"tiktok",name:"TikTok",status:"draft",st:"Draft"}
+    {id:"instagram",name:"Instagram"},
+    {id:"google",name:"Google"},
+    {id:"yandex",name:"Yandex"},
+    {id:"snapchat",name:"Snapchat"},
+    {id:"tiktok",name:"TikTok"}
   ];
   var main=document.getElementById('main'), tabs=document.getElementById('platTabs');
   var cur=(location.hash||'').replace('#','')||ls('plat','instagram');
@@ -642,7 +642,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);fon
     var rows=function(hs,ds){return kv(hs.map(function(h,i){return ['Headline '+(i+1),h,true,30];}).concat(ds.map(function(d,i){return ['Description '+(i+1),d,true,90];})),r.rtl);};
     document.getElementById('g-search').innerHTML=
       item(phone(gSearch(r,[r.h[0],r.h[1],r.h[2]],[r.h[0]?r.d[0]:'',r.d[1]],true)),'Responsive search ad · combination 1','BRAND - EX / BRAND - PHR ad groups · H1 pinned · sitelinks + callouts',rows([r.h[0],r.h[1],r.h[2]],[r.d[0],r.d[1]]))+
-      item(phone(gSearch(r,[r.h[0],r.h[5],r.h[4]],[r.d[2],r.d[3]],false)),'Responsive search ad · combination 2','Google rotates the other headlines; the assets shown above are the campaign\'s',rows([r.h[0],r.h[5],r.h[4]],[r.d[2],r.d[3]]))+
+      item(phone(gSearch(r,[r.h[0],r.h[5],r.h[4]],[r.d[2],r.d[3]],false)),'Responsive search ad · combination 2','Google rotates the other headlines; all headlines and descriptions are listed beside',rows([r.h[0],r.h[5],r.h[4]],[r.d[2],r.d[3]]))+
       '<div class="item"><div class="note"><b>All '+r.h.length+' headlines</b> and 4 descriptions in this language:'+kv(r.h.map(function(h,i){return ['H'+(i+1),h,true,30];}).concat(r.d.map(function(d,i){return ['D'+(i+1),d,true,90];})),r.rtl)+'</div></div>';
     var m=MH[ml];
     document.getElementById('g-mh').innerHTML='<div class="item"><div class="desk">'+gMasthead(m)+'</div><div class="cap"><span class="t">YouTube Masthead · 30-day reservation</span><span class="s">RPD_DroneReel_16x9_blurpad_30s · autoplays muted · companion General 1.jpg</span><details><summary>Ad fields</summary>'+kv([["Headline",m.h,true,20],["Description",m.d,true,55],["Call to action",m.cta,true],["Layout","Video + companion image",false]],m.rtl)+'</details></div></div>';
@@ -737,30 +737,27 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);fon
 
   /* ============ sections ============ */
   var SECTIONS={
-    instagram:'<div class="intro"><div><div class="eyebrow">Meta Ads Manager · Instagram placements only</div><h2 style="margin-top:8px">Feed, Stories, Reels and carousels</h2><p class="lede">Two Traffic campaigns, thirteen country ad sets each, four ads per ad set. Every ad is shown here in its lead placement; single-image ads toggle between the 4:5 feed cut and the 9:16 story cut. Pick a language to see the ad set that runs in that language.</p></div><dl class="facts"><dt>Status</dt><dd><span class="st live">Live</span></dd><dt>Account</dt><dd>act 1605016162841935 · Rixos Premium Dubai JBR</dd><dt>Structure</dt><dd>2 campaigns · 26 ad sets · 104 ads</dd><dt>Build sheet</dt><dd><a href="https://claude.ai/artifact/8AfK4NXnZVGZYgm7PHfFk4" target="_blank" rel="noopener">RPD Instagram Build Sheet v2.2</a></dd></dl></div>'+
+    instagram:'<div class="intro"><div><div class="eyebrow">Meta Ads Manager · Instagram placements only</div><h2 style="margin-top:8px">Feed, Stories, Reels and carousels</h2><p class="lede">Two Traffic campaigns, thirteen country ad sets each, four ads per ad set. Every ad is shown here in its lead placement; single-image ads toggle between the 4:5 feed cut and the 9:16 story cut. Pick a language to see the ad set that runs in that language.</p></div><dl class="facts"><dt>Structure</dt><dd>2 campaigns · 26 ad sets · 104 ads</dd><dt>Languages</dt><dd>EN-UK · EN-US · EN-Gulf · TR · FR · AR</dd></dl></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>Language</h3><p>Ad copy is per language; the Gulf ad sets run Arabic and English side by side.</p></div><div class="chips" id="ig-langs"></div></div><div class="chips" id="ig-camps"></div><div class="gal" id="ig-gal"></div></div>',
-    google:'<div class="intro"><div><div class="eyebrow">Google Ads · Rixos JBR-NEW 147-978-0697</div><h2 style="margin-top:8px">Five lanes on Google</h2><p class="lede">A responsive search ad in the brand ad groups, a 30-day YouTube Masthead, Demand Gen across Discover, YouTube and Gmail, Performance Max fenced to this hotel, and a Hotel campaign. Same nine countries and the same agency copy as Instagram.</p></div><dl class="facts"><dt>Status</dt><dd><span class="st draft">Draft</span></dd><dt>Lanes</dt><dd>Search · Masthead · Demand Gen · PMax · Hotel</dd><dt>Languages</dt><dd>EN · AR search; EN · TR · FR · AR Demand Gen</dd><dt>Build sheet</dt><dd><a href="https://claude.ai/artifact/QxYxPXXgUuE9vdr9AtNpHj" target="_blank" rel="noopener">RPD Google Build Sheet v3</a></dd></dl></div>'+
+    google:'<div class="intro"><div><div class="eyebrow">Google Ads</div><h2 style="margin-top:8px">Five lanes on Google</h2><p class="lede">A responsive search ad in the brand ad groups, a 30-day YouTube Masthead, Demand Gen across Discover, YouTube and Gmail, Performance Max fenced to this hotel, and a Hotel campaign. Same nine countries and the same agency copy as Instagram.</p></div><dl class="facts"><dt>Lanes</dt><dd>Search · Masthead · Demand Gen · PMax · Hotel</dd><dt>Languages</dt><dd>EN · AR search; EN · TR · FR · AR Demand Gen</dd></dl></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>S · Search</h3><p>Dropped into RPD - Unified Keyword Campaign, ad groups BRAND - EX and BRAND - PHR. Headline 1 is pinned; Google assembles the rest.</p></div><div class="chips" id="g-search-langs"></div></div><div class="gal" id="g-search"></div></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>M · YouTube Masthead</h3><p>Reservation at a fixed CPM, thirty days. The 9:16 drone reel sits on a blurred 16:9 ground so the towers are never cropped.</p></div><div class="chips" id="g-mh-langs"></div></div><div class="gal wide" id="g-mh"></div></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>D · Demand Gen</h3><p>One ad group per country, two image ads each: A Luxury of Living, B Luxury of Choice. Shown in the three surfaces Demand Gen serves.</p></div><div class="chips" id="g-dg-langs"></div></div><div class="gal" id="g-dg"></div></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>P · Performance Max</h3><p>English asset group shown; the Arabic asset group carries the Arabic search headlines. Display, Discover, Gmail and YouTube all draw from the same assets.</p></div></div><div class="gal" id="g-pmax"></div></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>H · Hotel campaign</h3><p>Hotel ads have no copy of their own: Google shows the property name, the official-site rate and the booking link from the Hotel Center feed.</p></div></div><div class="gal" id="g-hotel"></div></div>',
-    yandex:'<div class="intro"><div><div class="eyebrow">Yandex Direct · Russian-speaking markets</div><h2 style="margin-top:8px">Search and the Advertising Network</h2><p class="lede">Text ads on Yandex Search for the Russia and Kazakhstan source markets, and image-text ads across the Yandex Advertising Network. Russian copy comes from the July RPD previews; the English set mirrors the Google search ad for expat searches.</p></div><dl class="facts"><dt>Status</dt><dd><span class="st draft">Draft</span></dd><dt>Formats</dt><dd>Search text ad · РСЯ image ad</dd><dt>Languages</dt><dd>RU · EN</dd><dt>Limits</dt><dd>Title 56 · Title 2 30 · Text 81</dd></dl></div>'+
-      '<div class="note"><b>Copy source.</b> No Yandex build sheet was found on this machine, so these screens are built from the RPD Russian previews (July 2026) and the agency captions. If the Yandex Direct draft carries different wording, the draft wins.</div>'+
+    yandex:'<div class="intro"><div><div class="eyebrow">Yandex Direct · Russian-speaking markets</div><h2 style="margin-top:8px">Search and the Advertising Network</h2><p class="lede">Text ads on Yandex Search for the Russia and Kazakhstan source markets, and image-text ads across the Yandex Advertising Network. Russian and English copy sets.</p></div><dl class="facts"><dt>Formats</dt><dd>Search text ad · РСЯ image ad</dd><dt>Languages</dt><dd>RU · EN</dd><dt>Limits</dt><dd>Title 56 · Title 2 30 · Text 81</dd></dl></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>Search</h3><p>Two ads, one per campaign. Quick links and callouts are shared.</p></div><div class="chips" id="ya-langs"></div></div><div class="gal" id="ya-search"></div></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>Advertising Network (РСЯ)</h3><p>Image-text ads on partner sites and Yandex services.</p></div></div><div class="gal" id="ya-rsy"></div></div>',
-    snapchat:'<div class="intro"><div><div class="eyebrow">Snapchat Ads · Gulf-weighted</div><h2 style="margin-top:8px">Full-screen snaps and a Story tile</h2><p class="lede">Single image and single video ads in 9:16 with a swipe-up to the JBR page, plus a Story ad tile in Discover that plays the four snaps in sequence. Headlines are the Instagram headlines, which fit Snap\'s 34-character limit.</p></div><dl class="facts"><dt>Status</dt><dd><span class="st draft">Draft</span></dd><dt>Formats</dt><dd>Single image / video · Story ad</dd><dt>Languages</dt><dd>EN · TR · FR · AR</dd><dt>Limits</dt><dd>Brand name 25 · Headline 34</dd></dl></div>'+
-      '<div class="note"><b>Copy source.</b> No Snapchat build sheet was found on this machine; these screens use the Instagram copy sets. If the Snap draft differs, the draft wins.</div>'+
+    snapchat:'<div class="intro"><div><div class="eyebrow">Snapchat Ads · Gulf-weighted</div><h2 style="margin-top:8px">Full-screen snaps and a Story tile</h2><p class="lede">Single image and single video ads in 9:16 with a swipe-up to the JBR page, plus a Story ad tile in Discover that plays the four snaps in sequence. Headlines fit Snap\'s 34-character limit.</p></div><dl class="facts"><dt>Formats</dt><dd>Single image / video · Story ad</dd><dt>Languages</dt><dd>EN · TR · FR · AR</dd><dt>Limits</dt><dd>Brand name 25 · Headline 34</dd></dl></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>Language</h3></div><div class="chips" id="sn-langs"></div></div><div class="gal" id="sn-gal"></div></div>',
-    tiktok:'<div class="intro"><div><div class="eyebrow">TikTok Ads · For You feed</div><h2 style="margin-top:8px">In-feed video and a photo carousel</h2><p class="lede">The drone reel as two in-feed videos (day and night cuts) for The Luxury of Choice, and the Luxury Suite Collection as a swipeable photo carousel. Ad text is the first sentences of each caption, trimmed to TikTok\'s 100 characters.</p></div><dl class="facts"><dt>Status</dt><dd><span class="st draft">Draft</span></dd><dt>Formats</dt><dd>In-feed video · Carousel</dd><dt>Languages</dt><dd>EN · TR · FR · AR</dd><dt>Limits</dt><dd>Display name 20 · Ad text 100</dd></dl></div>'+
-      '<div class="note"><b>Copy source.</b> No TikTok build sheet was found on this machine; these screens use the Instagram copy sets, cut to length. If the TikTok draft differs, the draft wins.</div>'+
+    tiktok:'<div class="intro"><div><div class="eyebrow">TikTok Ads · For You feed</div><h2 style="margin-top:8px">In-feed video and a photo carousel</h2><p class="lede">The drone reel as two in-feed videos (day and night cuts) for The Luxury of Choice, and the Luxury Suite Collection as a swipeable photo carousel. Ad text is trimmed to TikTok\'s 100 characters.</p></div><dl class="facts"><dt>Formats</dt><dd>In-feed video · Carousel</dd><dt>Languages</dt><dd>EN · TR · FR · AR</dd><dt>Limits</dt><dd>Display name 20 · Ad text 100</dd></dl></div>'+
       '<div class="lane"><div class="lane-head"><div><h3>Language</h3></div><div class="chips" id="tt-langs"></div></div><div class="gal" id="tt-gal"></div></div>'
   };
   var RENDER={instagram:renderInstagram,google:renderGoogle,yandex:renderYandex,snapchat:renderSnap,tiktok:renderTikTok};
 
   function build(){
     main.innerHTML=PLATS.map(function(p){return '<section class="plat" id="sec-'+p.id+'" role="tabpanel">'+SECTIONS[p.id]+'</section>';}).join('');
-    tabs.innerHTML=PLATS.map(function(p){return '<button type="button" role="tab" data-p="'+p.id+'" aria-selected="false">'+p.name+'<span class="st '+p.status+'">'+p.st+'</span></button>';}).join('');
+    tabs.innerHTML=PLATS.map(function(p){return '<button type="button" role="tab" data-p="'+p.id+'" aria-selected="false">'+p.name+'</button>';}).join('');
     tabs.addEventListener('click',function(e){var b=e.target.closest('button[data-p]'); if(!b) return; show(b.dataset.p); });
     window.addEventListener('hashchange',function(){ var h=location.hash.replace('#',''); if(RENDER[h]) show(h,true); });
   }
