@@ -325,6 +325,60 @@ section.plat.on{display:flex}
 .tt-tabs{position:absolute;top:44px;left:0;right:0;z-index:2;display:flex;justify-content:center;gap:16px;color:rgba(255,255,255,.7);font-size:13px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.6)}
 .tt-tabs span.on{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
 
+/* ---------- September budget ---------- */
+:root{--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181}}
+:root[data-theme="dark"]{--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181}
+.budget{max-width:1280px;margin:0 auto;padding:28px 20px 0}
+.bud{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 24px 20px;display:flex;flex-direction:column;gap:24px}
+@media (max-width:640px){.bud{padding:20px 16px 16px}}
+.bud-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 40px;align-items:end}
+@media (max-width:820px){.bud-head{grid-template-columns:1fr}}
+.bud-head .lede{margin-top:8px;color:var(--ink-2);max-width:62ch}
+.hero{font-size:48px;font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.hero small{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.split{display:flex;flex-direction:column;gap:10px}
+.split h3{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:600}
+.split h3 span{color:var(--ink-3);font-weight:500}
+.stack{display:flex;gap:2px;height:24px}
+.stack .seg{position:relative;border:0;padding:0;margin:0;cursor:default;background:var(--sc);transition:filter .12s}
+.stack .seg:last-child{border-radius:0 4px 4px 0}
+.stack .seg:hover,.stack .seg:focus-visible{filter:brightness(1.1);outline:none}
+.stack .seg:focus-visible{box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 4px var(--ink)}
+.ticks{display:flex;gap:2px}
+.ticks div{min-width:0;font-size:12.5px;line-height:1.3;padding-right:6px}
+.ticks .n{font-weight:600;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.ticks .v{color:var(--ink-2);font-family:"IBM Plex Mono",monospace;font-size:11px;white-space:nowrap}
+@media (max-width:960px){.ticks{display:none}}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sc);flex:none;display:inline-block}
+.tip{position:absolute;z-index:5;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:8px;padding:8px 11px;font-size:12.5px;line-height:1.35;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);transform:translate(-50%,-100%);white-space:nowrap;display:none}
+.tip.on{display:block}
+.tip b{display:block;font-size:15px;font-weight:600}
+.tip i{display:inline-block;width:14px;height:3px;border-radius:2px;background:var(--sc);vertical-align:middle;margin-right:6px}
+.bud-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:24px 32px;align-items:start}
+@media (max-width:960px){.bud-grid{grid-template-columns:1fr}}
+.bud-t{width:100%;border-collapse:collapse;font-size:13.5px}
+.bud-t th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:left;padding:0 8px 8px 0;border-bottom:1px solid var(--line)}
+.bud-t td{padding:9px 8px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.bud-t tr:last-child td{border-bottom:0}
+.bud-t .num{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap;padding-right:0;padding-left:22px}
+.bud-t th.num{padding-right:0}
+.bud-t .pl{display:flex;align-items:center;gap:8px;font-weight:600}
+.bud-t .wh{color:var(--ink-2);font-size:12.5px;margin-top:2px}
+.bud-t tfoot td{font-weight:600;border-top:1px solid var(--line-2);border-bottom:0}
+.geo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.geo{grid-template-columns:1fr}}
+.geo-c{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.geo-c .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.geo-c .hd b{font-size:14px}
+.geo-c .lvl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);font-weight:600;white-space:nowrap}
+.geo-c dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 10px;font-size:12.5px}
+.geo-c dt{color:var(--ink-3);white-space:nowrap}
+.geo-c dd{margin:0;color:var(--ink-2)}
+.geo-c .on{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;margin-top:2px}
+.geo-c .on span{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2)}
+.bud-foot{font-size:12px;color:var(--ink-3);line-height:1.5}
+
 footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);font-size:12.5px;line-height:1.55;display:flex;flex-direction:column;gap:6px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -340,6 +394,75 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);fon
   </div>
   <div class="tabs" role="tablist" id="platTabs"></div>
 </div></header>
+
+<div class="budget" id="budget"><div class="bud">
+  <div class="bud-head">
+    <div>
+      <div class="eyebrow">September 2026 · media budget</div>
+      <h2 style="margin-top:8px">Twenty thousand dollars across five platforms</h2>
+      <p class="lede">Google and Meta take thirty percent each, Yandex twenty, TikTok and Snapchat ten apiece. The Gulf is bought at country level; Europe, the CIS and the United States at city level with a 25 km radius.</p>
+    </div>
+    <div class="hero">$20,000<small>September · total · USD</small></div>
+  </div>
+
+  <div class="split">
+    <h3>Share by platform <span>hover a segment for the figure</span></h3>
+    <div class="stack" role="img" aria-label="Google 30 percent, Meta 30 percent, Yandex 20 percent, TikTok 10 percent, Snapchat 10 percent">
+      <div class="seg" tabindex="0" style="--sc:var(--s1);flex:30" data-n="Google" data-p="30%" data-v="$6,000"></div>
+      <div class="seg" tabindex="0" style="--sc:var(--s2);flex:30" data-n="Meta · Instagram" data-p="30%" data-v="$6,000"></div>
+      <div class="seg" tabindex="0" style="--sc:var(--s3);flex:20" data-n="Yandex" data-p="20%" data-v="$4,000"></div>
+      <div class="seg" tabindex="0" style="--sc:var(--s4);flex:10" data-n="TikTok" data-p="10%" data-v="$2,000"></div>
+      <div class="seg" tabindex="0" style="--sc:var(--s5);flex:10" data-n="Snapchat" data-p="10%" data-v="$2,000"></div>
+    </div>
+    <div class="ticks" aria-hidden="true">
+      <div style="flex:30"><div class="n"><span class="dot" style="--sc:var(--s1)"></span>Google</div><div class="v">30% · $6,000</div></div>
+      <div style="flex:30"><div class="n"><span class="dot" style="--sc:var(--s2)"></span>Meta</div><div class="v">30% · $6,000</div></div>
+      <div style="flex:20"><div class="n"><span class="dot" style="--sc:var(--s3)"></span>Yandex</div><div class="v">20% · $4,000</div></div>
+      <div style="flex:10"><div class="n"><span class="dot" style="--sc:var(--s4)"></span>TikTok</div><div class="v">10% · $2,000</div></div>
+      <div style="flex:10"><div class="n"><span class="dot" style="--sc:var(--s5)"></span>Snapchat</div><div class="v">10% · $2,000</div></div>
+    </div>
+    <div class="tip" id="budTip" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="bud-grid">
+    <table class="bud-t">
+      <thead><tr><th>Platform</th><th class="num">Share</th><th class="num">USD</th></tr></thead>
+      <tbody>
+        <tr><td><div class="pl"><span class="dot" style="--sc:var(--s1)"></span>Google</div><div class="wh">GCC · Europe · United States — Search, Demand Gen, PMax, Hotel</div></td><td class="num">30%</td><td class="num">6,000</td></tr>
+        <tr><td><div class="pl"><span class="dot" style="--sc:var(--s2)"></span>Meta · Instagram</div><div class="wh">GCC · Europe · United States — Feed, Stories, Reels, carousels</div></td><td class="num">30%</td><td class="num">6,000</td></tr>
+        <tr><td><div class="pl"><span class="dot" style="--sc:var(--s3)"></span>Yandex Direct</div><div class="wh">CIS — Search and the Advertising Network</div></td><td class="num">20%</td><td class="num">4,000</td></tr>
+        <tr><td><div class="pl"><span class="dot" style="--sc:var(--s4)"></span>TikTok</div><div class="wh">GCC · Europe — in-feed video and carousel</div></td><td class="num">10%</td><td class="num">2,000</td></tr>
+        <tr><td><div class="pl"><span class="dot" style="--sc:var(--s5)"></span>Snapchat</div><div class="wh">GCC first, Europe — single snaps and a Story tile</div></td><td class="num">10%</td><td class="num">2,000</td></tr>
+      </tbody>
+      <tfoot><tr><td>September total</td><td class="num">100%</td><td class="num">20,000</td></tr></tfoot>
+    </table>
+
+    <div class="geo">
+      <div class="geo-c">
+        <div class="hd"><b>GCC</b><span class="lvl">Country level</span></div>
+        <dl><dt>Countries</dt><dd>United Arab Emirates, Saudi Arabia, Qatar, Kuwait, Bahrain</dd><dt>Languages</dt><dd>Arabic and English side by side</dd></dl>
+        <div class="on"><span><i class="dot" style="--sc:var(--s1)"></i>Google</span><span><i class="dot" style="--sc:var(--s2)"></i>Meta</span><span><i class="dot" style="--sc:var(--s4)"></i>TikTok</span><span><i class="dot" style="--sc:var(--s5)"></i>Snapchat</span></div>
+      </div>
+      <div class="geo-c">
+        <div class="hd"><b>Europe</b><span class="lvl">City level · +25 km</span></div>
+        <dl><dt>United Kingdom</dt><dd>London, Birmingham, Manchester, Glasgow, Leeds</dd><dt>France</dt><dd>Paris, Marseille, Lyon, Toulouse, Nice</dd><dt>Turkey</dt><dd>Istanbul, Ankara, Izmir, Bursa, Antalya</dd></dl>
+        <div class="on"><span><i class="dot" style="--sc:var(--s1)"></i>Google</span><span><i class="dot" style="--sc:var(--s2)"></i>Meta</span><span><i class="dot" style="--sc:var(--s4)"></i>TikTok</span><span><i class="dot" style="--sc:var(--s5)"></i>Snapchat</span></div>
+      </div>
+      <div class="geo-c">
+        <div class="hd"><b>CIS</b><span class="lvl">City level</span></div>
+        <dl><dt>Russia</dt><dd>Moscow, Saint Petersburg, Kazan, Yekaterinburg, Novosibirsk</dd><dt>Kazakhstan</dt><dd>Almaty, Astana</dd><dt>Languages</dt><dd>Russian and English</dd></dl>
+        <div class="on"><span><i class="dot" style="--sc:var(--s3)"></i>Yandex</span></div>
+      </div>
+      <div class="geo-c">
+        <div class="hd"><b>United States</b><span class="lvl">City level · +25 km</span></div>
+        <dl><dt>Cities</dt><dd>New York, Los Angeles, Chicago, Houston, Phoenix</dd><dt>Language</dt><dd>English (US)</dd></dl>
+        <div class="on"><span><i class="dot" style="--sc:var(--s1)"></i>Google</span><span><i class="dot" style="--sc:var(--s2)"></i>Meta</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="bud-foot">Europe and United States cities are the live Meta and Google ad sets, top five cities per country. CIS cities are the Yandex set for September. Platform shares are of the USD 20,000 September budget; the split across countries inside each platform follows each campaign's own delivery.</p>
+</div></div>
 
 <main class="wrap" id="main"></main>
 
@@ -771,5 +894,29 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--ink-3);fon
     document.querySelectorAll('section.plat video').forEach(function(v){ if(v.closest('section').classList.contains('on')){ v.play().catch(function(){}); } else { v.pause(); } });
   }
   build(); show(cur,true);
+
+  /* ============ budget tooltip ============ */
+  (function(){
+    var tip=document.getElementById('budTip'), box=tip&&tip.closest('.bud');
+    if(!tip||!box) return;
+    function showTip(seg,x){
+      tip.textContent='';
+      var i=document.createElement('i'); i.style.setProperty('--sc',seg.style.getPropertyValue('--sc'));
+      var b=document.createElement('b'); b.textContent=seg.dataset.v+' · '+seg.dataset.p;
+      tip.appendChild(b); tip.appendChild(i); tip.appendChild(document.createTextNode(seg.dataset.n));
+      var r=seg.getBoundingClientRect(), br=box.getBoundingClientRect();
+      var cx=(x==null?r.left+r.width/2:x)-br.left;
+      tip.style.left=Math.max(70,Math.min(br.width-70,cx))+'px';
+      tip.style.top=(r.top-br.top-10)+'px';
+      tip.classList.add('on');
+    }
+    function hideTip(){ tip.classList.remove('on'); }
+    box.querySelectorAll('.stack .seg').forEach(function(seg){
+      seg.addEventListener('pointermove',function(e){ showTip(seg,e.clientX); });
+      seg.addEventListener('pointerleave',hideTip);
+      seg.addEventListener('focus',function(){ showTip(seg); });
+      seg.addEventListener('blur',hideTip);
+    });
+  })();
 })();
 </script>
